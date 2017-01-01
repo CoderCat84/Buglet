@@ -25,11 +25,10 @@
   "homepage": "https://github.com/CoderCat84/Buglet#readme",
   "devDependencies": {
     "@types/node": "^6.0.55",
-    "express": "^4.14.0",
-    "ts-node": "^2.0.0",
-    "typescript": "^2.1.4"
+    "express": "^4.14.0"
   },
   "dependencies" : {
-      "typescript":"^2.1.4"
+    "typescript":"^2.1.4",
+    "express":"^4.14.0"
   }
 }
