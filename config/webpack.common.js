@@ -33,6 +33,8 @@ module.exports = (env) => {
         new HtmlWebpackPlugin({
             template: "index.html"
         }),
+        new webpack.ContextReplacementPlugin(
+/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/, __dirname),             
         new webpack.optimize.CommonsChunkPlugin({
             name: ["polyfills", "vendor"].reverse() 
         }),
