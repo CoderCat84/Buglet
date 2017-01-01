@@ -4,8 +4,10 @@
   "description": "A Simple bug tracking app",
   "main": "index.js",
   "scripts": {
-    "start": "node src/server/index.js",
-     "test": "test"
+    "start": "node src/server/server.js",
+    "test": "test",
+    "postinstall": "tsc src/server/server.ts",
+    "startdev": "node src/server/index.js"
   },
   "repository": {
     "type": "git",
