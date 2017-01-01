@@ -4,7 +4,8 @@
   "description": "A Simple bug tracking app",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "node src/server/index.js",
+     "test": "test"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/CoderCat84/Buglet/issues"
   },
-  "homepage": "https://github.com/CoderCat84/Buglet#readme"
+  "homepage": "https://github.com/CoderCat84/Buglet#readme",
+  "devDependencies": {
+    "@types/node": "^6.0.55",
+    "express": "^4.14.0",
+    "ts-node": "^2.0.0",
+    "typescript": "^2.1.4"
+  }
 }
