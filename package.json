@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server/server.js",
     "test": "test",
-    "postinstall": "tsc src/server/server.ts",
+    "postinstall": "tsc src/server/server.ts && webpack",
     "startdev": "node src/server/index.js",
     "build": "webpack"
   },
