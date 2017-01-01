@@ -1,0 +1,23 @@
+{
+  "name": "buglet",
+  "version": "0.0.1",
+  "description": "A Simple bug tracking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderCat84/Buglet.git"
+  },
+  "keywords": [
+    "bug",
+    "todo"
+  ],
+  "author": "Robert Goins <robert.goins@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoderCat84/Buglet/issues"
+  },
+  "homepage": "https://github.com/CoderCat84/Buglet#readme"
+}
