@@ -9,3 +9,7 @@ if (process.env.ENV === "production:") {
 }
 
 platformBrowserDynamic().bootstrapModule(BugletModule);
+
+if ((<any>module).hot) {
+    (<any>module).hot.accept();
+}

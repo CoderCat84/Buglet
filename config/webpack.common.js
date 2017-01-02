@@ -26,6 +26,10 @@ module.exports = (env) => {
                 {
                     test: /\.html$/,
                     use: "raw-loader",
+                },
+                {
+                    test: /\.scss$/,
+                    use: ["style-loader", "css-loader", "sass-loader"],
                 }
             ]
     },
@@ -34,7 +38,7 @@ module.exports = (env) => {
             template: "index.html"
         }),
         new webpack.ContextReplacementPlugin(
-/angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/, __dirname),             
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/, __dirname),             
         new webpack.optimize.CommonsChunkPlugin({
             name: ["polyfills", "vendor"].reverse() 
         }),
