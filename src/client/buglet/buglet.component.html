@@ -1,8 +1,62 @@
-<main style="position:absolute; left:0; top:0; right:0; bottom:0; display:flex; flex-direction:column">
-    <div style="background-color:purple; color: white"> Buglet </div>
-    <div style="display:flex; flex:1"> 
-        <div style="background-color:lightgrey"> Projects </div>
-        <div style="border-right: 1px solid grey"> Items </div>
-        <div style="flex:1"> Item Details </div>
-    </div>
+<main style="position:absolute; left:0; right:0; top:0; bottom:0; display:flex; flex-direction:column">
+   <div style="display:flex; justify-content:space-between; align-items: center; align-items: center" class="k-header k-primary">
+      <div>Buglet</div>
+      <div>
+         <div style="display:flex; align-items:center"> {{ user?.displayName }}
+            <img *ngIf="user !== undefined" [src]="user?.photoURL" width="24" />
+         </div>
+      </div>
+   </div>
+   <div style="display:flex; align-items: center">
+      <div>Project: </div>
+      <kendo-dropdownlist [data]="projects | async" [textField]="'name'" [valuePrimitive]="false" (valueChange)="changeProject($event)"></kendo-dropdownlist>
+      <button kendoButton (click)="showNewProjectDialog()">+</button>
+   </div>
+   <div style="display:flex; flex:1">
+      <div style="display:flex; flex-direction:column">
+         <div>
+            Items
+            <span>
+            <button kendoButton (click)="startCreatingItem()">+</button>
+            </span>
+         </div>
+         <input class="k-textbox" *ngIf="isCreatingItem" (keydown)="itemInputKeyDown($event)" />
+         <kendo-panelbar style="flex:1">
+            <kendo-panelbar-item title="Projects">
+                <template kendoPanelBarContent>
+                    <div *ngFor="let project of projects | async" (click)="changeProject(project)">
+                        {{project.name}}
+                    </div>
+                </template>
+            </kendo-panelbar-item>
+            <kendo-panelbar-item title="Bugs" expanded="true">
+               <template kendoPanelBarContent>
+                    <div *ngFor="let item of items | async" (click)="selectedItem = item">
+                        {{item.title}}
+                    </div>
+               </template>
+            </kendo-panelbar-item>
+         </kendo-panelbar>
+        </div>
+        <div style="flex:1">
+            <item-editor [item]="selectedItem" (updateItem)="updateItem($event)"></item-editor>
+        </div>
+   </div>
+   <kendo-dialog title="New Project" *ngIf="isShowingNewProjectDialog">
+      <div>
+         <div>Name: </div>
+         <input [(ngModel)]="newProjectName" class="k-textbox" />
+      </div>
+      <kendo-dialog-actions>
+         <button kendoButton (click)="createNewProject()"> Create </button>
+      </kendo-dialog-actions>
+   </kendo-dialog>
+   <kendo-dialog *ngIf="user === undefined">
+      <div>
+         <button kendoButton *ngFor="let provider of authProviders">{{ provider }} </button>
+      </div>
+      <kendo-dialog-actions>
+         <button kendoButton primary="true" (click)="trySignIn()">Sign In</button>
+      </kendo-dialog-actions>
+   </kendo-dialog>
 </main>

@@ -4,7 +4,7 @@ let app: any = express();
 
 app.use(express.static("dist"));
 
-app.get('/', (req: any, res: any) => {
+app.get("/", (req: any, res: any) => {
     res.send("Hello World");
 });
 

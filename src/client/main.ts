@@ -4,7 +4,9 @@ import { enableProdMode } from "@angular/core";
 
 import { BugletModule } from "./buglet/buglet.module";
 
-if (process.env.ENV === "production:") {
+import "common.scss";
+
+if (process.env.ENV === "production") {
     enableProdMode();
 }
 

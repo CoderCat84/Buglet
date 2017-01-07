@@ -6,7 +6,6 @@
         "sourceMap": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "noImplicitAny": true,
         "suppressImplicitAnyIndexErrors": true,
         "moduleResolution": "node"
     },

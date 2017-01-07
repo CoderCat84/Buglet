@@ -4,7 +4,8 @@ let webpack = require("webpack");
 
 module.exports = (env) => {
     return { 
-    entry: {
+   devtool: "source-map",
+   entry: {
         "app": "main.ts",
         "vendor": "vendor.ts",
         "polyfills": "polyfills.ts"
