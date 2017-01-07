@@ -1,10 +1,10 @@
 import * as express from "express";
 
-let app = express();
+let app: any = express();
 
 app.use(express.static("dist"));
 
-app.get('/', (req, res) => {
+app.get("/", (req: any, res: any) => {
     res.send("Hello World");
 });
 
