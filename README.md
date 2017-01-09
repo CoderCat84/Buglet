@@ -1,5 +1,7 @@
 # Buglet
 
+[![Build Status](https://travis-ci.org/CoderCat84/Buglet.svg?branch=master)](https://travis-ci.org/CoderCat84/Buglet)
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
 ## Development server
