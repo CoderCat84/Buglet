@@ -1,0 +1,27 @@
+<main>
+    <div>
+        <div>{{ item?.titleField?.value}}</div>
+        <div>{{ item?.bugTypeField?.value }} </div>
+    </div>
+    <br>
+    <div *ngFor="let field of item?.fields" style="border-top:1px solid grey">
+        <div> {{field.name}} </div>
+        <div> {{field.value }} </div>
+    </div>
+    <div>
+        Create Panel
+        <div>
+           Field Title
+           <input #titleInput kendoTextbox />
+        </div> 
+        <div>
+            Field Type
+            <kendo-dropdownlist #typeDropdown
+                                [value]="editControlTypes[0]" 
+                                [data]="editControlTypes"></kendo-dropdownlist>
+        </div>
+    </div>
+    <div *ngIf="item">
+        <button kendoButton (click)="addField(titleInput.value, typeDropdown.value)"> Add Field </button>
+    </div>
+</main>
