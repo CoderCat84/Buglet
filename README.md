@@ -1,2 +1,0 @@
-# Buglet
-simple bug manager
