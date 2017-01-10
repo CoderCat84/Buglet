@@ -57,11 +57,6 @@ export class AppComponent {
         this.isCreatingItem = true;
     }
 
-    public createItem($event: any) {
-        this.isCreatingItem = false;
-        console.log($event);
-    }
-
     public updateItem(item: Item) {
         //let updatable = <any>{ ...item };
         let updatable = JSON.parse(JSON.stringify(item));
