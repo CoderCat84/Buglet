@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/CoderCat84/Buglet.svg?branch=master)](https://travis-ci.org/CoderCat84/Buglet)
 [![Code Climate](https://codeclimate.com/github/CoderCat84/Buglet/badges/gpa.svg)](https://codeclimate.com/github/CoderCat84/Buglet)
 [![Issue Count](https://codeclimate.com/github/CoderCat84/Buglet/badges/issue_count.svg)](https://codeclimate.com/github/CoderCat84/Buglet)
+[![Issue Count](https://codeclimate.com/github/CoderCat84/Buglet/badges/issue_count.svg)](https://codeclimate.com/github/CoderCat84/Buglet)
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
 
