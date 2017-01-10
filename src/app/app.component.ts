@@ -58,7 +58,6 @@ export class AppComponent {
     }
 
     public updateItem(item: Item) {
-        //let updatable = <any>{ ...item };
         let updatable = JSON.parse(JSON.stringify(item));
         delete updatable.$key;
         delete updatable.$value;

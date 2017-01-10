@@ -25,3 +25,11 @@ before_script:
 - ng build
 
 script: karma start karma.conf.js --single-run
+
+after_success:
+  - npm install -g codeclimate-test-reporter
+  - codeclimate-test-reporter < coverage/coverage.lcov
+
+addons:
+    code_climate:
+        repo_token: fbabcf7df3d0b1f1a5bf5e92a0510c03362812207c0eec05b03f55638e4e6422
